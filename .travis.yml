@@ -1,13 +1,16 @@
 language: ruby
+sudo: false
 rvm:
-  - 2.1
-
+  - 2.2
 before_install:
   - export NOKOGIRI_USE_SYSTEM_LIBRARIES=true
-
+  - gem update bundler
 script:
   - bundle exec jekyll build --drafts
 #  - bundle exec htmlproof ./_site
-
 notifications:
-  email: false
+  email:
+    - ogataken@gmail.com
+branches:
+  only:
+    - gh-pages
