@@ -35,7 +35,7 @@ exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.
 
 # Site owner
 owner:
-  name: Kenichi Sanemat Murahashi
+  name: Kenichi 'Sanemat' Murahashi
   avatar: bio-photo.jpg
   email: ogataken@gmail.com
   disqus-shortname:
