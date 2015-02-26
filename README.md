@@ -14,4 +14,5 @@ http://mmistakes.github.io/so-simple-theme/theme-setup/
 ```sh
 bundle --binstubs bundle_bin
 bundle_bin/jekyll serve -w --config _config.yml,_config.local.yml
+open http://localhost:4000
 ```
