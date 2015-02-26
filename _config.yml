@@ -4,7 +4,7 @@ title: Saddler - checkstyle2anywhere
 locale: en_US
 description: >
   Saddler provides checkstyle format to anywhere.
-  e.g. You can run rubycop, eslint and jscs,
+  e.g. You can run rubocop, eslint and jscs,
   then saddler post their comments on your GitHub Pull Request.
   This can execute on TravisCI, CircleCI and your own CI!
 logo: site-logo.png
