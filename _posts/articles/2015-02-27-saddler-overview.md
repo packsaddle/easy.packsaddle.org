@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "変更したファイルにrubocopやjscsを実行して pull requestに自動でコメントする"
-excerpt: "tl;dr コマンドをパイプでつないで、CIからsaddlerコマンドで書き込みする。"
+excerpt: >-
+  tl;dr コマンドをパイプでつないで、CIからsaddlerコマンドで書き込みする。
 categories: articles
 tags: [saddler, overview, js, ruby, travisci, circleci, ja]
 author: sanemat
