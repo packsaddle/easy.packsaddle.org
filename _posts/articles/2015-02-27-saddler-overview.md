@@ -29,7 +29,7 @@ image:
   <figcaption>saddlerの実行結果イメージ</figcaption>
 </figure>
 
-左がjscs, 右がrubocop。
+一番目がjscs, 二番目がrubocop。
 
 ## 流れ
 
