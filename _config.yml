@@ -7,7 +7,7 @@ description: >
   e.g. You run rubocop, eslint and jscs,
   then saddler post their comments on your GitHub Pull Request.
   This can execute on TravisCI, CircleCI and your own CI!
-logo: site-logo.png
+logo: site-packsaddle-min.jpg
 search: true
 url: http://packsaddle.org
 
