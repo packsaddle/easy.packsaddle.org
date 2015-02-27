@@ -9,9 +9,7 @@ author: sanemat
 comments: true
 share: true
 image:
-  feature: so-simple-sample-image-7.jpg
-  credit: WeGraphics
-  creditlink: http://wegraphics.net/downloads/free-ultimate-blurred-background-pack/
+  thumb: 2015-02-27-rubocop-comment.png
 ---
 
 ## tl;dr
