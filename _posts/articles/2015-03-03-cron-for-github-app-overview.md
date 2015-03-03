@@ -3,9 +3,9 @@ layout: post
 title: "GitHubとHerokuの組み合わせでCron for GitHub"
 excerpt: >-
   tl;dr GitHubとHeroku Schedulerの組み合わせで、Cron for GitHubを実現する。
-  Heroku Buttonで一発。
+  Heroku Buttonでデプロイ。
 categories: articles
-tags: [cron, github, heroku, travisci, circleci, ja]
+tags: [github, cron_for_github, overview, cron, github, heroku, ja]
 author: sanemat
 comments: true
 share: true
