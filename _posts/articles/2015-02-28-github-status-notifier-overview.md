@@ -5,7 +5,7 @@ excerpt: >-
   tl;dr github-status-notifierコマンドでCI環境からGitHubのPull Requestのstatusを
   簡単に通知する。TravisCIがやってるみたいなのを作れる。
 categories: articles
-tags: [github, overview, status, travisci, circleci, ja]
+tags: [github, github_status_notifier, overview, status, travisci, circleci, ja]
 author: sanemat
 comments: true
 share: true

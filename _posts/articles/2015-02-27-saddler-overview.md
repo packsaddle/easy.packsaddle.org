@@ -4,7 +4,7 @@ title: "変更したファイルにrubocopやjscsを実行して pull requestに
 excerpt: >-
   tl;dr コマンドをパイプでつないで、CIからsaddlerコマンドで書き込みする。
 categories: articles
-tags: [saddler, overview, js, ruby, travisci, circleci, ja]
+tags: [saddler, overview, js, ruby, travisci, circleci, github, pull_request, ja]
 author: sanemat
 comments: true
 share: true
