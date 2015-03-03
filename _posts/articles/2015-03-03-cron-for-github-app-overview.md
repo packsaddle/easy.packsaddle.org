@@ -5,7 +5,7 @@ excerpt: >-
   tl;dr GitHubとHeroku Schedulerの組み合わせで、Cron for GitHubを実現する。
   Heroku Buttonでデプロイ。
 categories: articles
-tags: [github, cron_for_github, overview, cron, github, heroku, ja]
+tags: [github, cron_for_github, overview, cron, heroku, ja]
 author: sanemat
 comments: true
 share: true
