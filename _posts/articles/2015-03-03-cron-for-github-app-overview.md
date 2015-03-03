@@ -18,8 +18,7 @@ image:
 * GitHubとHeroku Schedulerの組み合わせでCron for GitHubを実現する
 * [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/packsaddle/ruby-cron_for_github-app)
 
-<figure class="half">
-  <img src="/images/2015-03-03-cron-for-github-app-readme.png" alt="GitHub readme">
+<figure>
   <img src="/images/2015-03-03-cron-for-github-app-branches.png" alt="GitHub branches">
   <figcaption>cron-for-githubの実行結果イメージ</figcaption>
 </figure>
@@ -94,7 +93,7 @@ branches:
 branches:
   only:
     - master
-    - /^cron-for-github\/.*$/
+    - /^cron_for_github\/.*$/
 
 {% endhighlight %}
 
@@ -117,6 +116,6 @@ branches:
 
 * [ruby-cron_for_github-appにスター](https://github.com/packsaddle/ruby-cron_for_github-app)
 * [ruby-cron_for_githubにスター](https://github.com/packsaddle/ruby-cron_for_github)
-* [Git Refs | GitHub API](https://developer.github.com/v3/git/refs/)
-* [Creating a 'Deploy to Heroku' Button | Heroku Dev Center](https://devcenter.heroku.com/articles/heroku-button)
-* [app.json Schema | Heroku Dev Center](https://devcenter.heroku.com/articles/app-json-schema)
+* [Git Refs GitHub API](https://developer.github.com/v3/git/refs/)
+* [Creating a 'Deploy to Heroku' Button Heroku Dev Center](https://devcenter.heroku.com/articles/heroku-button)
+* [app.json Schema Heroku Dev Center](https://devcenter.heroku.com/articles/app-json-schema)
