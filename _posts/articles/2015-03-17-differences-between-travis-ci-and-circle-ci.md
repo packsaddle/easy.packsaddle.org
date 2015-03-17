@@ -99,13 +99,14 @@ branches:
 
 ### TravisCI
 
-pull request時にhookで起動する。
+pull request作成時にhookで起動する。
 条件を満たしていれば。
+
 pull request済みのbranchに追加のcommitでも起動する。
 
 ### CircleCI
 
-pull request時にはhookで**起動しない**。
+pull request作成時にはhookで**起動しない**。
 branchのpushを検知する側だけなので。
 
 だから、pull requestに対して何かをしたい、例えばlintしてコメントをつけるとか、の場合、
