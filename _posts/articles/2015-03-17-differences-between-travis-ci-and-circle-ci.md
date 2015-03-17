@@ -157,7 +157,7 @@ feature branchにmasterをmergeして追い付かせた時に正しく検出し�
 
 #### pushされたbranchのビルド
 
-Travisはカリカリにチューンしてあるので、masterとかorigin/masterとかいない。
+Travisは必要最低限にチューンしてあるので、masterとかorigin/masterとかいない。
 ちょっとだけ注意。
 
 {% highlight bash %}
