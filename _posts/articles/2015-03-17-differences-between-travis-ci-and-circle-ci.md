@@ -266,7 +266,7 @@ drone.io, wercker, teamcity, codeship, あたりのメジャーどころは、
 
 ローカルやCI上で動くはずのツールが、CIサービス上では動かないとき、
 このへんの詰めが漏れてることが多いので e.g. pronto なぜか動かないときは、
-contributeするとよいです。
+ココらへんに気を配ってcontributeするとよいです。
 なお、
 [checkstyle形式の結果をpull request review commentするsaddler](https://github.com/packsaddle/ruby-saddler)
 などのpacksaddleプロダクトはその辺のCI間の差異を吸収して、使うときは考えなくていいように、作ってます。
