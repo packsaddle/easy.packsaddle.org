@@ -150,12 +150,14 @@ git 操作でなにかするアプリの場合、
 している。
 feature branchにmasterをmergeして追い付かせた時に正しく検出しなそう、とかある。
 
+注) TravisCIに限れば、環境変数 `TRAVIS_COMMIT`で該当コミットが取れる。
+
 この「仮にmergeしてみる」は色々流派がありそうで、実際対TravisCIでは動いているけど、
 他のパターンが有るときに全部解決してるかは自信ない。
 
 #### pushされたbranchのビルド
 
-Travisはカリカリにチューンしてあるので、masterとかorigin/masterとかいない。
+Travisは必要最低限にチューンしてあるので、masterとかorigin/masterとかいない。
 ちょっとだけ注意。
 
 {% highlight bash %}
@@ -264,7 +266,7 @@ drone.io, wercker, teamcity, codeship, あたりのメジャーどころは、
 
 ローカルやCI上で動くはずのツールが、CIサービス上では動かないとき、
 このへんの詰めが漏れてることが多いので e.g. pronto なぜか動かないときは、
-contributeするとよいです。
+ココらへんに気を配ってcontributeするとよいです。
 なお、
 [checkstyle形式の結果をpull request review commentするsaddler](https://github.com/packsaddle/ruby-saddler)
 などのpacksaddleプロダクトはその辺のCI間の差異を吸収して、使うときは考えなくていいように、作ってます。
@@ -277,6 +279,7 @@ contributeするとよいです。
 * [TravisCI example](https://travis-ci.org/sanemat/ruby-example-rails-banana)
 * [Configuring CircleCI - CircleCI](https://circleci.com/docs/configuration)
 * [Travis CI: Configuring your build](http://docs.travis-ci.com/user/build-configuration/)
+* [Travis CI: The Build Environment](http://docs.travis-ci.com/user/ci-environment/)
 * [Travis CI: Environment Variables](http://docs.travis-ci.com/user/environment-variables/)
 * [Continuous Integration - StackShare](http://stackshare.io/continuous-integration)
 * [CI SaaS / OSSをまとめてみたら25個もあったヨ - SideCI Blog](http://sideci.hatenablog.com/entry/2015/03/13/144948)
