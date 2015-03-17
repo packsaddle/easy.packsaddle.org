@@ -40,7 +40,7 @@ Cron for GitHubの使い方はリンク先を参照する。
 キモはnamespaceの指定で、`cron_for_tachikoma/XXXXX`というブランチを定期的に作るようにする。
 CI側ではこのブランチを監視する。
 
-## CI側スクリプト
+## CI側スクリプト (CircleCI)
 
 CI側では、テスト後にスクリプトを実行。なお、例はCircleCIの場合。
 
@@ -105,6 +105,60 @@ Git HTTPSable Pushや PullRequest Create はリンク先を参照する。
 [定期的にライブラリの依存関係をアップデートしてPull Request](https://github.com/metarubygems/carrion_crow/pull/18)
 出来るようになった。
 
+### TravisCIの場合
+
+(Edited: 2015-03-17 15:15)
+
+pull request以外はmasterのbuildしか対象にしていない場合、`.travis.yml`で`cron_for_tachikoma`も[監視](https://github.com/sanemat/ruby-example-rails-banana/blob/master/.travis.yml#L19-L22)する。
+
+{% highlight yaml %}
+branches:
+  only:
+  - master
+  - /^cron_for_tachikoma\/.*/
+{% endhighlight %}
+
+`if pull request以外`のところを変更する。
+TravisCIの`git checkout`の方式により`origin/master`が居ないので、`git checkout -b "${HEAD}" "${TRAVIS_BRANCH}"`にする。
+もしくは`git checkout -b "${HEAD}"`にする。
+
+{% highlight bash %}
+#!/usr/bin/env bash
+set -ev
+
+# only sunday
+if [[ -n "${TRAVIS_PULL_REQUEST}" && "${TRAVIS_PULL_REQUEST}" == "false" && "${TRAVIS_BRANCH}" =~ ^cron_for_tachikoma/.* && $(date +%w) -eq 0 ]]; then
+  # gem prepare
+  gem install --no-document git_httpsable-push pull_request-create
+
+  # git prepare
+  git config user.name sanemat
+  git config user.email foo@example.com
+  HEAD_DATE=$(date +%Y%m%d_%H-%M-%S)
+  HEAD="tachikoma/update-${HEAD_DATE}"
+
+  # checkout (for TravisCI)
+  git checkout -b "${HEAD}" "${TRAVIS_BRANCH}"
+
+  # bundle install
+  bundle --no-deployment --without nothing --jobs 4
+
+  # bundle update
+  bundle update
+
+  git add Gemfile.lock
+  git commit -m "Bundle update ${HEAD_DATE}"
+
+  # git push
+  git httpsable-push origin "${HEAD}"
+
+  # pull request
+  pull-request-create
+fi
+
+exit 0
+{% endhighlight %}
+
 ## 備考
 
 反対に、webhook ping用のブランチである `cron_for_tachikoma/XXXXX` ではテストをスキップする、というのを入れておかないと、
@@ -132,3 +186,5 @@ Git HTTPSable Pushや PullRequest Create はリンク先を参照する。
 * [GitHubとHerokuの組み合わせでCron for GitHub – Saddler - checkstyle to anywhere](http://packsaddle.org/articles/cron-for-github-app-overview/)
 * [Httpsで簡単に、ログ安全に、git pushする Git HTTPSable Push – Saddler - checkstyle to anywhere](http://packsaddle.org/articles/git-httpsable-push-overview/)
 * [Tachikoma gem](https://github.com/sanemat/tachikoma/blob/master/lib/tachikoma/application.rb)
+* [CircleCIでの実例 - carrion_crow](https://github.com/metarubygems/carrion_crow)
+* [TravisCIでの実例 - ruby-example-rails-banana](https://github.com/sanemat/ruby-example-rails-banana)
