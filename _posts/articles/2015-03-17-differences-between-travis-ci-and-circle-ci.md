@@ -5,7 +5,7 @@ excerpt: >-
   tl;dr TravisCIとCircleCIの根底にある違いの考え方を理解すると早い。
   そして、違いを考慮しているproductを使うと便利。
 categories: articles
-tags: [travis-ci, circle-ci, ci, ja]
+tags: [travis-ci, circle-ci, ci, git, pull-request, github, ja]
 author: sanemat
 comments: true
 share: true
