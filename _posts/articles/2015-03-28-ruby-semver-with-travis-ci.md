@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Ruby semver with Travis-CI"
+title: "Ruby version policy with Travis-CI"
 excerpt: >-
-  How to treat Ruby's semver in Travis-CI.
+  How to treat Ruby version policy in Travis-CI.
 categories: articles
 tags: [travis-ci, ruby, en]
 author: sanemat
