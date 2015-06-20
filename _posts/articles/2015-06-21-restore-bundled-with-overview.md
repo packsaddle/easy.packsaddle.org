@@ -37,10 +37,10 @@ Bundler v1.10.2で`bundle update`して、BUNDLED WITHにversionを記録して�
 
 ```text
 $ cat Gemfile.lock
-GEM                                                                                                                              
-  remote: https://rubygems.org/                                                                                                  
-  specs:                                                                                                                         
-    actionmailer (4.1.11)                                                                                                        
+GEM
+  remote: https://rubygems.org/
+  specs:
+    actionmailer (4.1.11)
       actionpack (= 4.1.11)
 (snip)
   unicorn-worker-killer
@@ -81,7 +81,7 @@ $ git diff
 (snip)
 @@ -291,4 +292,4 @@ DEPENDENCIES
      webmock
-  
+
    BUNDLED WITH
   -   1.10.2
   +   1.10.4
