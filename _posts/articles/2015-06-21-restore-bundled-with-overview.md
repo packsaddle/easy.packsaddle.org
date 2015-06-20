@@ -124,6 +124,48 @@ $ git diff
 Bundler v1.9なら、消えたsectionが戻る。
 より新しいBundler v1.10なら、使った記録がそこだけ戻る。
 
+### Example
+
+#### Newer Bundler Case
+
+{% highlight bash %}
+$ cat Gemfile.lock
+(snip)
+  unicorn-worker-killer
+  webmock
+
+BUNDLED WITH
+   1.10.2
+{% endhighlight %}
+
+Execute `bundle update` by Bundler v1.10.3.
+
+{% highlight bash %}
+$ bundle update
+(update)
+
+$ git diff
+(snip)
+@@ -291,4 +296,4 @@ DEPENDENCIES
+   webmock
+
+ BUNDLED WITH
+-   1.10.2
++   1.10.3
+{% endhighlight %}
+
+Then, execute `restore-bundled-with`.
+
+{% highlight bash %}
+$ restore-bundled-with
+(restore BUNDLED WITH section)
+
+$ git diff
+(no diff)
+{% endhighlight %}
+
+There is no diff, because this restores `BUNDLED WITH` from git repository.
+
 ## まとめ
 
 Bundler開発チームの精神を逸脱するので、あまり推奨はしない。
