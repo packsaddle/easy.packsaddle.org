@@ -35,7 +35,7 @@ Bundler v1.10.0から`BUNDLED WITH`というsectionに`bundle update`を実行�
 
 Bundler v1.10.2で`bundle update`して、BUNDLED WITHにversionを記録しておく。
 
-```text
+{% highlight bash %}
 $ cat Gemfile.lock
 GEM
   remote: https://rubygems.org/
@@ -48,13 +48,13 @@ GEM
 
 BUNDLED WITH
    1.10.2
-```
+{% endhighlight %}
 
 ### Bundler v1.9.9で bundle update
 
 BUNDLED WITHのsectionごと消える。悲しい。
 
-```text
+{% highlight bash %}
 $ bundle update
 (update)
 
@@ -67,13 +67,13 @@ $ git diff
 -
 -BUNDLED WITH
 -   1.10.2
-```
+{% endhighlight %}
 
 ### Bundler v1.10.4(新しい)で bundle update
 
 BUNDLED WITHの記録を更新する。
 
-```text
+{% highlight bash %}
 $ bundle update
 (update)
 
@@ -85,13 +85,13 @@ $ git diff
    BUNDLED WITH
   -   1.10.2
   +   1.10.4
-```
+{% endhighlight %}
 
 ### Bundler v1.10.1(古い)で bundle update
 
 Warning出しつつ、BUNDLED WITHは更新しない。
 
-```text
+{% highlight bash %}
 $ bundle update
 Warning: the running version of Bundler is older than the version that created the lockfile.
 We suggest you upgrade to the latest version of Bundler by running `gem install bundler`.
@@ -99,7 +99,7 @@ We suggest you upgrade to the latest version of Bundler by running `gem install 
 
 $ git diff
 (no diff)
-```
+{% endhighlight %}
 
 ## 現実解?
 
