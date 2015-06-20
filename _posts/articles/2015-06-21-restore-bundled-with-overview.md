@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "RestoreBundledWithを使ってBundlerのBUNDLED WITHをうまく取り扱う"
+title: "restore_bundled_withを使ってBundlerのBUNDLED WITHをうまく取り扱う"
 excerpt: >-
   tl;dr Bundler v1.10.0からBUNDLED WITHのsectionが導入された。
-  RestoreBundledWithを使うことで、Bundler開発チームの精神を逸脱して(!)、
+  restore_bundled_withを使うことで、Bundler開発チームの精神を逸脱して(!)、
   異なるversionのBundlerとBUNDLED WITHをうまく取り扱う。
 categories: articles
 tags: [restore_bundled_with, bundler, ja]
@@ -17,7 +17,7 @@ image:
 ## tl;dr
 
 * Bundler v1.10.0からBUNDLED WITHのsectionが導入された。
-* RestoreBundledWithを使うことで、Bundler開発チームの精神を逸脱して(!)、異なるversionのBundlerとBUNDLED WITHをうまく取り扱う。
+* [restore_bundled_with](https://rubygems.org/gems/restore_bundled_with)を使うことで、Bundler開発チームの精神を逸脱して(!)、異なるversionのBundlerとBUNDLED WITHをうまく取り扱う。
 
 <figure>
   <img src="/images/2015-06-21-bundled-with.png" alt="BUNDLED WITH section">
