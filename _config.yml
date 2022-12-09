@@ -9,7 +9,7 @@ description: >
   This can execute on TravisCI, CircleCI and your own CI!
 logo: site-packsaddle-min.jpg
 search: true
-url: http://packsaddle.org
+url: https://packsaddle.org
 
 # Jekyll configuration
 
